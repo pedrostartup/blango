@@ -39,6 +39,7 @@ class Dev(Configuration):
     CSRF_COOKIE_SAMESITE = 'None'
     SESSION_COOKIE_SAMESITE = 'None'
 
+    AUTH_USER_MODEL = "blango_auth.user"
 
     # Application definition
 
@@ -53,6 +54,7 @@ class Dev(Configuration):
         'crispy_forms',
         'crispy_bootstrap5',
         'debug_toolbar',
+        'blango_auth',
     ]
 
     MIDDLEWARE = [
@@ -128,6 +130,8 @@ class Dev(Configuration):
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
     ]
+
+    
 
     # Internationalization
     # https://docs.djangoproject.com/en/3.2/topics/i18n/
